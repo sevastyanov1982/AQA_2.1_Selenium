@@ -40,7 +40,7 @@ class CallbackTest {
     void shouldSearchByCssSelector() {
         driver.get("http://localhost:9999");
         driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Иванов Иван");
-        driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("не помню");
+        driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+71234567890");
         driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         driver.findElement(By.cssSelector("button[type='button']")).click();
         String text = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText();
